@@ -34,14 +34,14 @@ All files are located in the main directory and src folder.
 
 
  # Overview of Project
- For this project the main objective was to analyze the given Zillow dataset and select the 5 best zipcodes based  on a particular metric. This will help investors and other individuals select profitables ways to increase their portfolio or overall income. For this project to a succes we need to accrurately predict the direction a housing price will head and have minimal error or risk for potential investors.
+ For this project the main objective was to analyze the given Zillow dataset and select the 5 best zipcodes based  on a particular metric. This will help investors and other individuals select profitables ways to increase their portfolio or overall income. For this project to a succes we need to accrurately predict the direction a housing price will head and have minimal error or risk for potential stakeholders.
 
  # Preview of Results
 
 ![](./report/figures/map_5.png)
 
  Above you can see the five zip codes we believe to be the best investment opportunities within the Chicago Metropolitan area. The remainder of this document will run through the steps we took to come to these conclusions.
- 
+
 # Methodoly of the Project and Data Analysis:
 
 ### Data gathering
@@ -49,12 +49,12 @@ All files are located in the main directory and src folder.
 The overal all approach to the data set was the CRISP-DM data mining process. To start out the CRISP-DM methodology we gathered by visiting this website [Website to download the Housing Data](https://www.zillow.com/research/data/). To obtain the same data used in this project, go under the Home Value section. The categories are ZHVIAll Homes. Geography is by Metro & US.
 
 # Data understanding
-This is where the exploratory data analysis occurs. We began by looking at all of the zipcodes and determined there were a lot of of zipscodes with their own unique characteristics. We decied to focus our efforts on one area. The chosen area was the Chicago metroolitian area. From those zip codes we need to filter it once more to select the one withs the most potential for being profitable. To do this we calculated the 5 Year return on investment(ROI) and the 2 year ROI. We then comparied the two sets of data and took the top zips codes that occrued within the 30 of both filters. 
+This is where the exploratory data analysis occurs. We began by looking at all of the zipcodes and determined there were a lot of of zipscodes with their own unique characteristics. We decied to focus our efforts on one area. The chosen area was the Chicago metroolitian area. From those zip codes we need to filter it once more to select the one withs the most potential for being profitable. To do this we calculated the 5 Year return on investment(ROI) and the 2 year ROI. We then comparied the two sets of data and took the top zips codes that occrued within the 30 of both filters.
 
 We also looked into the data's time ranges and noticed there were NaN values in the earlier years dating in the 1996's and on. The next step we took was to filter the date's time zones. We decided to exclude data that was observed prior to 2013. This was due to the prior missing NaN values as well as the market crash of 2008. The was not a restabalization of the housing market until early 2013 based on the data set. After filtering the data for useful median house values and data ranges we were then ready to processing the data.
 
 # Data Processing
-The original dataset contained data on nearly fifteen thousand zip codes. It was clear that this was going to be too much to analyze given our time constraints, so we decided to focus our analysis on the zip codes within the Chicago Metropolitan area. Using the column "Metro", we were able to subset our dataset to only include these zip codes, which brought us to 325 zip codes to analyze. 
+The original dataset contained data on nearly fifteen thousand zip codes. It was clear that this was going to be too much to analyze given our time constraints, so we decided to focus our analysis on the zip codes within the Chicago Metropolitan area. Using the column "Metro", we were able to subset our dataset to only include these zip codes, which brought us to 325 zip codes to analyze.
 
 Considering that our analysis was trying to determine the best zip codes to invest in, we really only wanted to focus on those that would make investors the most money. For that reason, we filtered our data again using the historical five year and two year return on investment of each zip code. We calculated the ROI for these two time frames for each zip code in our filtered dataset, and used this to determine the thirty zip codes that may represent the best investments. The formula we used to calculate the ROI is as follows: ((Current value - past value) / past value) * 100. This calculates the ROI as a percentage, which was an important aspect of our analysis. If we were to use the absolute ROI, those zip codes that were valued higher would have largest absolute return, but may not produce the largest return relative to the initial investment.
 
